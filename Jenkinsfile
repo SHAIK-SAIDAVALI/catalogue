@@ -32,8 +32,9 @@ pipeline {
             steps {
                 script{
                     sh """
-                        which npm; npm -v; echo \$PATH
-                        npm install
+                        hostname
+                        hostname -I
+                        ls -la /usr/bin/npm || echo "NPM SYMLINK MISSING ON THIS HOST"
                     """
                 }
             }
