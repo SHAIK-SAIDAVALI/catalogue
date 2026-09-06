@@ -32,6 +32,7 @@ pipeline {
             steps {
                 script{
                     sh """
+                        which npm; npm -v; echo \$PATH
                         npm install
                     """
                 }
