@@ -35,6 +35,8 @@ pipeline {
                         hostname
                         hostname -I
                         ls -la /usr/bin/npm || echo "NPM SYMLINK MISSING ON THIS HOST"
+                        which npm
+                        npm install
                     """
                 }
             }
