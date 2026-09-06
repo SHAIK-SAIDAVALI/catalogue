@@ -11,6 +11,7 @@ pipeline {
         ACC_ID = "056033527722"
         PROJECT = "roboshop"
         COMPONENT = "catalogue"
+        PATH = "/usr/local/bin:/usr/bin:/bin"
     }
     options {
         timeout(time: 10, unit: 'MINUTES') 
