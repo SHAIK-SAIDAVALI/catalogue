@@ -11,7 +11,7 @@ pipeline {
         ACC_ID = "056033527722"
         PROJECT = "roboshop"
         COMPONENT = "catalogue"
-        PATH = "/usr/local/bin:/usr/bin:/bin"
+        
     }
     options {
         timeout(time: 10, unit: 'MINUTES') 
@@ -32,11 +32,6 @@ pipeline {
             steps {
                 script{
                     sh """
-                        echo "PATH=$PATH"
-                        which node
-                        which npm
-                        node --version
-                        npm --version
                         npm install
                     """
                 }
